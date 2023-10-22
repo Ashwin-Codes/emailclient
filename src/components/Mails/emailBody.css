@@ -1,0 +1,42 @@
+.email-body {
+	display: flex;
+	gap: 2rem;
+	padding: 4rem;
+	background-color: #fff;
+	border: 2px solid var(--clr-border);
+	border-radius: 10px;
+	height: max-content;
+}
+
+.email-body .avatar {
+	min-width: 3rem;
+	height: 3rem;
+	background-color: var(--clr-accent);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.email-body .heading {
+	display: flex;
+	justify-content: space-between;
+}
+
+.email-body .heading h1 {
+	color: var(--clr-text);
+}
+
+.email-body .time {
+	color: var(--clr-text);
+	margin-top: 1rem;
+}
+
+.email-body .content-body {
+	color: var(--clr-text);
+	margin-top: 1rem;
+}

@@ -1,7 +1,24 @@
 .mails {
-	padding: 4rem;
-
+	width: 100%;
+	min-width: 50%;
+	height: calc(100vh - 4rem);
+	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+}
+
+.mails-dashboard {
+	display: flex;
+	gap: 2rem;
+	padding: 4rem;
+}
+
+.mails::-webkit-scrollbar {
+	display: none;
+}
+
+.mails {
+	-ms-overflow-style: none; /* Edge */
+	scrollbar-width: none; /* Firefox */
 }

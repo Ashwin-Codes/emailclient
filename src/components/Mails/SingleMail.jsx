@@ -6,7 +6,7 @@ export default function SingleMail({ mail, onClick }) {
 		<li
 			className="single-mail"
 			onClick={() => {
-				onClick(mail.id)
+				onClick({ id: mail.id, from: mail.from, subject: mail.subject, time: getFormatedDate(mail.date) })
 			}}>
 			<div className="avatar">{mail.from.name[0]}</div>
 			<div className="mail-info">
