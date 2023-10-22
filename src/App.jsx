@@ -4,6 +4,7 @@ import fetchMails from "./network/fetchMails"
 import { useState } from "react"
 import { useRef } from "react"
 import Loader from "./components/Loader/Loader"
+import Mails from "./components/Mails/Mails"
 
 export default function App() {
 	const [mails, setMails] = useState(null)
@@ -32,5 +33,9 @@ export default function App() {
 		)
 	}
 
-	return <div>mails</div>
+	return (
+		<div>
+			<Mails mails={mails.list} />
+		</div>
+	)
 }
