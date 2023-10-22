@@ -2,16 +2,19 @@ import "./emailBody.css"
 import { useEffect, useState } from "react"
 import Loader from "../Loader/Loader"
 import getMailById from "../../network/getMailById"
+import addToFavorites from "../../utils/addToFavorites"
+import addToRead from "../../utils/addToRead"
 
 export default function EmailBody({ id, from, subject, time }) {
 	const [email, setEmail] = useState(null)
 
 	useEffect(() => {
 		async function getEmail() {
-			console.log(id)
 			const body = await getMailById(id)
-			console.log(body)
 			setEmail(body)
+
+			// Set email to read
+			addToRead(id)
 		}
 		getEmail()
 	}, [id])
@@ -30,7 +33,12 @@ export default function EmailBody({ id, from, subject, time }) {
 			<div className="email-content">
 				<div className="heading">
 					<h1>{subject}</h1>
-					<button>Mark as favorite</button>
+					<button
+						onClick={() => {
+							addToFavorites(id)
+						}}>
+						Mark as favorite
+					</button>
 				</div>
 				<p className="time">{time}</p>
 				<p className="content-body">{email.body}</p>

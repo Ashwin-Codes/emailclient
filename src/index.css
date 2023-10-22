@@ -13,7 +13,6 @@
 	--clr-read-background: #f2f2f2;
 }
 body {
-	height: 100vh;
 	background-color: var(--clr-background);
 	font-family: "Inter", sans-serif;
 }

@@ -27,6 +27,15 @@
 	justify-content: space-between;
 }
 
+.email-body .heading button {
+	color: #fff;
+	background-color: var(--clr-accent);
+	border-radius: 18px;
+	padding: 0.4rem 0.75rem;
+	border: none;
+	cursor: pointer;
+}
+
 .email-body .heading h1 {
 	color: var(--clr-text);
 }
