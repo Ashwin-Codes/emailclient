@@ -31,7 +31,7 @@ export default function App() {
 			setFilterdMail(mails)
 
 			// Calculate total number of pages
-			totalPages.current = Math.ceil(mails.total / mails.list.length)
+			totalPages.current = Math.ceil(mails.total / 10)
 			// Set loading to false
 			setIsLoading(false)
 		}
@@ -101,9 +101,25 @@ export default function App() {
 					Favorites
 				</button>
 			</div>
-			<div className="pagination-btn">
-				<button>Next Page</button>
-				<button>Prev Page</button>
+			<div className="pagination-btns">
+				<button
+					onClick={() => {
+						let newPage = page + 1
+						if (newPage > totalPages.current) return
+						console.log("Setting new page : ", newPage, totalPages.current)
+						setPage(newPage)
+					}}>
+					Next Page
+				</button>
+				<button
+					onClick={() => {
+						let newPage = page - 1
+						if (newPage < 1) return
+						console.log("Setting new page : ", newPage)
+						setPage(newPage)
+					}}>
+					Prev Page
+				</button>
 			</div>
 
 			<Mails mails={filteredMail.list} />

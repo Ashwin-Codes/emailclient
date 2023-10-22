@@ -41,7 +41,7 @@ export default function EmailBody({ id, from, subject, time }) {
 					</button>
 				</div>
 				<p className="time">{time}</p>
-				<p className="content-body">{email.body}</p>
+				<p className="content-body" dangerouslySetInnerHTML={{ __html: email.body }}></p>
 			</div>
 		</div>
 	)

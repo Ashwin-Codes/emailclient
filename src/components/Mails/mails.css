@@ -2,7 +2,7 @@
 	width: 100%;
 	min-width: 50%;
 	height: calc(100vh - 6rem);
-	overflow: scroll;
+	overflow-x: scroll;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -11,5 +11,5 @@
 .mails-dashboard {
 	display: flex;
 	gap: 2rem;
-	padding: 4rem;
+	padding: 1rem 4rem;
 }
